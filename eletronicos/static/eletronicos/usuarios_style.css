@@ -1,0 +1,92 @@
+/* === ESTILO GLOBAL === */
+body {
+    background-color: #f9f9c5; /* amarelo claro suave */
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #333;
+}
+
+/* === TÍTULO === */
+h1 {
+    margin: 40px 0 20px;
+    font-size: 2rem;
+    color: #222;
+}
+
+/* === TABELA === */
+table {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto 50px;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Cabeçalho da tabela */
+thead {
+    background-color: #333;
+    color: #fff;
+}
+
+thead th {
+    padding: 16px 12px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+/* Corpo da tabela */
+tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+tbody td {
+    padding: 14px 12px;
+    border-bottom: 1px solid #eee;
+    font-size: 14.5px;
+}
+
+/* Responsividade para celular */
+@media (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 20px;
+        background: #fff;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 12px;
+        top: 12px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
+
+
+

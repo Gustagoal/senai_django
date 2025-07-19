@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'eletronicos/usuarios_style.css'%}">
+    <title>Pedidos realizados</title>
+</head>
+<body>
+    <h1>
+        Usuários Cadastrados
+
+    </h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Data de Criação</th>
+                <th>Categoria</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for usuario in usuarios %}
+            <tr>
+                <td>
+                    {{ usuario.nome }}</td>
+                <td>{{ usuario.email }}</td>
+                <td>{{ usuario.data_criacao }}</td>
+                <td>{{ usuario.categorias}}</td>
+                <th>{%if usuario.status %}
+                Ativo
+                {% else %}
+                Pendente
+                {% endif %}
+                </th>
+      <td>
+                 <a href="{% url 'remover_usuario' usuario.id %}" 
+                   onclick="return confirm('Tem certeza que deseja remover este usuário?');">
+                   <button style="background-color: red; color: white; border: none; padding: 5px 10px; border-radius: 5px;">
+                       Remover
+                   </button>
+                </a>
+            </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+<a href="{% url 'home_page' %}"><button type="submit">Voltar</button></a>
+</body>
+</html>
