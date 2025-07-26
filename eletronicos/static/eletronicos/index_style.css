@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #eef2f5;
+    font-family: 'Open Sans', 'Segoe UI', sans-serif;
+    color: #2d2d2d;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+h1 {
+    font-size: 34px;
+    font-weight: 700;
+    color: #3c3c3c;
+    margin-bottom: 25px;
+}
+
+h2 {
+    display: inline-block;
+    background-color: #ffffff;
+    padding: 10px 25px;
+    font-size: 20px;
+    border-radius: 30px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    margin: 25px 0;
+    color: #4e4e4e;
+}
+
+form {
+    background-color: #ffffff;
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
+
+form p {
+    margin-bottom: 16px;
+    font-size: 15px;
+}
+
+form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #555;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    transition: border 0.3s ease, background-color 0.2s ease;
+}
+
+form input:focus,
+form select:focus {
+    border-color: #4caf50;
+    background-color: #fff;
+    outline: none;
+}
+
+button {
+    margin-top: 50px;
+    padding: 20px 28px;
+    font-size: 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #4caf50;
+    color: #fff;
+    cursor:pointer;
+    transition: background-color 0.3s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    background-color: #0fed0f;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+a {
+    display: inline-block;
+    margin-top: 25px;
+    font-weight: 600;
+    color: #0edb0e;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0aba18;
+}
+
+hr {
+    margin: 50px auto;
+    width: 75%;
+    border: none;
+    border-top: 1px solid #ccc;
+}
+
+@media (max-width: 600px) {
+    form {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 18px;
+        padding: 8px 18px;
+    }
+
+}
