@@ -79,23 +79,7 @@ tbody td {
         font-weight: bold;
         text-align: left;
     }
-    button {
-    margin-top: 15px;
-    padding: 10px 25px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    background-color: #222;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
 
-button:hover {
-    background-color: rgb(6, 198, 6);
-}
+
 
 }
-
-
-

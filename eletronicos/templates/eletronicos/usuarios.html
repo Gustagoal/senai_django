@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'eletronicos/usuarios_style.css'%}">
+    <link rel="stylesheet" href="{% static 'eletronicos\usuarios2_style.css'%}">
     <title>Pedidos realizados</title>
 </head>
 <body>
@@ -48,6 +48,17 @@
             {% endfor %}
         </tbody>
     </table>
-<a href="{% url 'home_page' %}"><button type="submit">Voltar</button></a>
+    <a href="{% url 'home_page' %}"><button type="submit" style='margin-top: 15px;
+    padding: 10px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #222;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;button:hover{
+    background-color: rgb(14, 211, 14);
+}'>Voltar
+    </button></a>
 </body>
 </html>
