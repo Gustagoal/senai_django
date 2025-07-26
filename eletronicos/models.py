@@ -2,10 +2,10 @@ from django.db import models
 
 # Create your models here.
 categorias = (
-    ("celular", "Celular"),
-    ("notebook", "Notebook"),
-    ("fones", "Fones"),
-    ("computadores", "Computadores"),
+    ("Celular", "Celular"),
+    ("Notebook", "Notebook"),
+    ("Fones", "Fones"),
+    ("Computadores", "Computadores"),
 )
 status_opcoes = (
     (False, "pendente"),

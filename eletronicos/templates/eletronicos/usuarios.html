@@ -27,9 +27,9 @@
             {% for usuario in usuarios %}
             <tr>
                 <td>
-                {{ usuario.produto }}</td>
+                {{ usuario.produto.upper}}</td>
                 <td>{{ usuario.data_criacao }}</td>
-                <td>{{ usuario.categorias}}</td>
+                <td>{{ usuario.categorias.upper}}</td>
                 <th>{%if usuario.status %}
                 Ativo
                 {% else %}
