@@ -15,7 +15,6 @@ status_opcoes = (
 
 class UsuariosModel(models.Model):
     categorias = models.CharField(choices=categorias)
-    email = models.EmailField()
     produto = models.CharField()
     data_criacao = models.DateTimeField(auto_now_add=True)
     status = models.BooleanField(default=True, choices=status_opcoes)
