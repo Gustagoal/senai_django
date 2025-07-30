@@ -15,7 +15,7 @@
 
     <table>
         <thead>
-            <tr>
+            <tr><th>Usuario</th>
                 <th>Produto</th>
                 <th>Data de Criação</th>
                 <th>Categoria</th>
@@ -26,6 +26,7 @@
         <tbody>
             {% for usuario in usuarios %}
             <tr>
+                <td>{{usuario.usuarios.title}}</td>
                 <td>
                 {{ usuario.produto.upper}}</td>
                 <td>{{ usuario.data_criacao }}</td>
