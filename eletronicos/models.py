@@ -12,10 +12,19 @@ status_opcoes = (
     (True, "Concluido"),
 )
 
+setores = [
+    ("Faturamento","Faturamento"),
+    ("Recursos Humanos","Recursos Humanos"),
+    ("Comercial","Comercial"),
+    ("TI","TI")
+
+    
+]
 
 class UsuariosModel(models.Model):
     usuarios = models.CharField(max_length=100)
     categorias = models.CharField(choices=categorias)
+    setor = models.CharField(choices=setores)
     produto = models.CharField(max_length=50)
     data_criacao = models.DateTimeField(auto_now_add=True)
     status = models.BooleanField(default=True, choices=status_opcoes)
