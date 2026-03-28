@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'eletronicos\usuarios_style.css'%}">
+    <title>Pedidos realizados</title>
+</head>
+<body>
+    <h1>
+        Produtos cadastrados
+
+    </h1>
+
+    <table>
+        <thead>
+            <tr><th>Usuario</th>
+                <th>Produto</th>
+                <th>Data de Criação</th>
+                <th>Categoria</th>
+                <th>Status</th>
+                <th>Excluir</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for usuario in usuarios %}
+            <tr>
+                <td>{{usuario.usuarios.title}}</td>
+                <td>
+                {{ usuario.produto.upper}}</td>
+                <td>{{ usuario.data_criacao }}</td>
+                <td>{{ usuario.categorias.upper}}</td>
+                <th>{%if usuario.status %}
+                Ativo
+                {% else %}
+                Pendente
+                {% endif %}
+                </th>
+      <td>
+                 <a href="{% url 'remover_usuario' usuario.id %}" 
+                   onclick="return confirm('Tem certeza que deseja remover este usuário?');">
+                   <button style="background-color: red; color: white; border: none; padding: 5px 10px; border-radius: 5px;cursor:pointer">
+                       Remover
+                   </button>
+                </a>
+            </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{% url 'home_page' %}"><button type="submit" style='margin-top: 15px;
+    padding: 10px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #222;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;button:hover{
+    background-color: rgb(14, 211, 14);
+}'>Voltar
+    </button></a>
+</body>
+</html>
